@@ -1,0 +1,27 @@
+package ${package}.dao;
+
+import ${package}.pojo.${className}BO;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.annotations.Mapper;
+
+
+@Mapper
+public interface ${className}Mapper {
+
+    ${className}BO get(${pk.javaDataType} ${pk.lowercaseAttrName});
+
+    List<${className}BO> list(Map<String, Object> map);
+
+    int count(Map<String, Object> map);
+
+    int save(${className}BO ${classname});
+
+    int update(${className}BO ${pk.lowercaseAttrName});
+
+    int remove(${pk.javaDataType} ${pk.columnName});
+
+    int batchRemove(${pk.javaDataType}[]${pk.lowercaseAttrName});
+}

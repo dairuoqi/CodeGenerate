@@ -1,0 +1,24 @@
+package ${package}.service.Interface;
+
+import ${package}.pojo.${className}BO;
+
+import java.util.List;
+import java.util.Map;
+
+
+public interface ${className}Service {
+
+	${className}BO get(${pk.javaDataType} ${pk.lowercaseAttrName});
+
+	List<${className}BO> list(Map<String, Object> map);
+
+	int count(Map<String, Object> map);
+
+	int save(${className}BO ${classname});
+
+	int update(${className}BO ${classname});
+
+	int remove(${pk.javaDataType} ${pk.lowercaseAttrName});
+
+	int batchRemove(${pk.javaDataType}[] ${pk.lowercaseAttrName}s);
+}

@@ -1,0 +1,57 @@
+package ${package}.service.Impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Map;
+import lombok.RequiredArgsConstructor;
+import ${package}.dao.${className}Mapper;
+import ${package}.pojo.${className}BO;
+import ${package}.service.Interface.${className}Service;
+
+@Service
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+public class ${className}ServiceImpl implements ${className}Service {
+
+
+    private final ${className}Mapper ${classname}Mapper;
+
+    @Override
+    public ${className}BO get(${pk.javaDataType} ${pk.lowercaseAttrName}) {
+        return ${classname}Mapper.get(${pk.lowercaseAttrName});
+    }
+
+    @Override
+    public List<${className}BO> list(Map<String, Object> map) {
+        List<${className}BO> ${classname}List;
+        ${classname}List = ${classname}Mapper.list(map);
+        return ${classname}List;
+    }
+
+    @Override
+    public int count(Map<String, Object> map) {
+        return ${classname}Mapper.count(map);
+    }
+
+    @Override
+    public int save(${className}BO ${classname}) {
+        return ${classname}Mapper.save(${classname});
+    }
+
+    @Override
+    public int update(${className}BO ${classname}) {
+        return ${classname}Mapper.update(${classname});
+    }
+
+    @Override
+    public int remove(${pk.javaDataType} ${pk.lowercaseAttrName}) {
+        return ${classname}Mapper.remove(${pk.lowercaseAttrName});
+    }
+
+    @Override
+    public int batchRemove(${pk.javaDataType}[] ${pk.lowercaseAttrName}) {
+        return ${classname}Mapper.batchRemove(${pk.lowercaseAttrName});
+    }
+
+}

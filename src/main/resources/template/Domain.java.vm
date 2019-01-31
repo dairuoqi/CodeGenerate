@@ -1,0 +1,19 @@
+package ${package}.pojo;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import lombok.Data;
+
+import java.math.BigDecimal;
+
+
+@Data
+public class ${className}BO implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+#foreach ($column in $columns)
+    private $column.javaDataType $column.lowercaseAttrName;
+#end
+
+}

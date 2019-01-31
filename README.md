@@ -1,0 +1,2 @@
+# CodeGenerate
+一个基于Mybatis 和velocity模板引擎 的生成代码SpringBoot项目
